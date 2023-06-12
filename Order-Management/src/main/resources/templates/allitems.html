@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Food ordering App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<br>
+<br>
+<br>
+<h1 align="center"> Food items List </h1>
+<div class="container" th:each="f : ${f1}" align="center">
+
+    <br>
+    <br>
+    <div class="card mb-3" style="max-width: 450px;">
+
+        <div class="row no-gutters">
+            <div class="col-md-4">
+
+
+
+                <img
+                        class="card-img border border-gray-dark"
+                        width="250" height="250"
+                        th:src="${ f.foodImage}" border="20px" />
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <br>
+                    <label><strong>Food Name</strong>
+                        <div class="clear" align="center">[[${f.foodName }]]</div></label>
+                    <br>
+                    <br>
+                    <label><strong>Food Price</strong>
+                        <div class="clear" align="center">[[${f.foodPrice }]]</div></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
